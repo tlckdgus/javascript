@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /* 피겨 점수 계산
+       최댓값, 최소값, 합계, 평균
+     */
+     //매개변수: 배열(점수) 
+     //리턴: 합계
+    function Figure(figure_score){
+      this.score = figure_score;
+     this.total = function(){
+      let sum = 0;
+      for(let i = 0; i<score.length; i++){
+        sum += score[i];
+      }
+      this.sum = sum;
+      return sum;
+     }
+
+     this.max = function() {
+       let m = score[0];
+      for(let i=0; i<score.length; i++){
+       if(score[i] > m){
+         m = score[i];
+       }
+     }
+      this.m = m;
+      return m; 
+    }
+
+    this.min = function() {
+      let min = score[0];
+      for(let i=0; i<score.length; i++){
+       if(score[i] < m){
+         min = score[i];
+       }
+     }
+     this.min = n
+      return min; 
+    }
+  }
+
+     let tes_score = [3,4,1,5];
+     let figure = new Figure(tes_score);
+
+     figure.total();
+     figure.max();
+     figure.min();
+     let avg = (figure.total - figure.max - figure.min) / tes_score.length-2;
+     
+     console.log(avg);
+     console.log(tes_total);
+     console.log(tes_max);
+     console.log(tes_min);
+   // 예술점수
+  //  let pcs_score = [2,3,3,4]
+
+  //  function max1(pcs_score){
+  //   let m = pcs_score[0];
+  //   for(let i=0; i < pcs_score.length; i++)
+  //      if(pcs_score[i] > m){
+  //       m = pcs_score[i]
+  //      } 
+  //      return m;
+  //  }
+
+     
+  </script>
+</body>
+</html>

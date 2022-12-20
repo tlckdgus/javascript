@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>
+    <button id="btnOpen">새창열기</button>
+    <button id="btnClose">창닫기</button>
+    <button id="btnMove">이동</button>
+    <button id="btnGeoLocation">현재위치</button>
+    <button id="btnLink">페이지이동</button>
+    <button id="btnRef">참조</button>
+  </div>
+  <div id="x"></div>
+  <script>
+    let popup;
+
+    btnLink.onclick = function(){
+      location.assign("location.html")
+    }
+    
+    btnGeoLocation.onclick = getLocation
+
+    
+    btnOpen.onclick =  function(){
+      let width = 400
+      let height = 200
+      let left = 100
+      let top = 100
+      popup = window.open('popup.html','ranodm',
+      'width='+width+',height=200,left='+left+',top='+top)
+      if(popup == null){
+        alert('팝업 차단 해제')
+      }
+    }
+    btnClose.onclick = function(){
+      popup.close();
+    }
+    btnMove.onclick = function(){
+      popup.moveBy(100,0);
+    }
+    function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude +
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+    console.log(navigator.userAgent)
+
+
+
+
+      //btnOpen.click();
+    /* console.log(window.innerWidth, window.innerHeight)
+    console.log(window.outerWidth, window.outerHeight)
+    console.log(window.screenX, window.screenY)
+    console.log(window.scrollX, window.scrollY)*/  
+</script>
+</body>
+</html>
